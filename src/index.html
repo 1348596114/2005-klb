@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../../2005/dist/scss/index.min.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="h_box">
+        <div class="header">
+            <h1>
+                <a href=""><img src="../../2005/src/img/qf_logo.jpg" alt=""></a>
+            </h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">课程</a></li>
+                    <li><a href="">走进千锋</a></li>
+                    <li><a href="">双选会</a></li>
+                    <li><a href="">千锋教育</a></li>
+                    <li><a href="">好程序员</a></li>
+                    <li><a href="">扣叮学堂</a></li>
+                    <li><a href="">APP外包</a></li>
+                    <li><a href="">培训服务</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- banner -->
+    <div class="banner">
+        <!-- 轮播 -->
+        <div class="pic">
+            <ul>
+                <li class="first" style="display: list-item;"><img src="../../2005/src/img/01 (1).png" alt="图片"></li>
+                <li style="display: none;"><img src="../../2005/src/img/01 (2).png" alt="图片"></li>
+                <li style="display: none;"><img src="../../2005/src/img/01 (3).png" alt="图片"></li>
+            </ul>
+        </div>
+
+        <div class="picnav">
+            <div class="oinner">
+                <ul>
+                    <li class="active"><img src="../../2005/src/img/5 (1).jpg" alt="图片"></li>
+                    <li class=""><img src="../../2005/src/img/5 (2).jpg" alt="图片"></li>
+                    <li class=""><img src="../../2005/src/img/5 (3).jpg" alt="图片"></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script src="../dist/js/jquery-1.12.4.min.js"></script>
+    <script>
+        var piclist = $("#banner .pic ul li");
+        var picnav = $("#banner .picnav ul li");
+        var banner = $("#banner");
+        var navbox = $("#banner .picnav");
+        var i = 0;
+        var time = null;
+        banner.hover(function () {
+            navbox.stop();
+
+            clearInterval(time)
+        },
+            function () {
+                navbox.stop();
+
+                time = setInterval(function () {
+                    i = (i + 1) % 5;
+                    auto(i)
+                },
+                    3000)
+            });
+        picnav.mouseover(function () {
+            i = $(this).index();
+            auto(i)
+        });
+        function auto(i) {
+            picnav.addClass("first").siblings().removeClass("first");
+            piclist.eq(i).fadeIn().siblings().fadeOut();
+            picnav.eq(i).addClass("active").siblings().removeClass("active")
+        }
+        time = setInterval(function () {
+            i = (i + 1) % 5;
+            auto(i)
+        },
+            3000);
+    </script>
+
+    <!-- section -->
+    <div class="s_box">
+        <div class="section">
+            <ul class="s_one">
+                <li class="first">
+                    <em></em>
+                    <i></i>
+                    <span></span>
+                    <a href="">
+                        <h3>移动产业</h3>
+                        <h4>国内互联网开发人才提供平台</h4>
+                        <p>精准高效的人才匹配
+                            <br>
+
+                            专业多样的招聘平台
+                            <br>
+
+                            覆盖全国的优质资源
+
+                        </p>
+                    </a>
+                </li>
+                <li class="first">
+                    <em class="one_em"></em>
+                    <i class="one_i"></i>
+                    <span></span>
+                    <a href="">
+                        <h3>移动产业</h3>
+                        <h4>国内互联网开发人才提供平台</h4>
+                        <p>精准高效的人才匹配
+                            <br>
+
+                            专业多样的招聘平台
+                            <br>
+
+                            覆盖全国的优质资源
+
+                        </p>
+                    </a>
+                </li>
+                <li class="first">
+                    <em class="thr_em"></em>
+                    <i class="thr_i"></i>
+                    <span></span>
+                    <a href="">
+                        <h3>移动产业</h3>
+                        <h4>国内互联网开发人才提供平台</h4>
+                        <p>精准高效的人才匹配
+                            <br>
+
+                            专业多样的招聘平台
+                            <br>
+
+                            覆盖全国的优质资源
+
+                        </p>
+                    </a>
+                </li>
+                <li class="first last">
+                    <em class="for_em"></em>
+                    <i class="for_i"></i>
+                    <span></span>
+                    <a href="">
+                        <h3>移动产业</h3>
+                        <h4>国内互联网开发人才提供平台</h4>
+                        <p>精准高效的人才匹配
+                            <br>
+
+                            专业多样的招聘平台
+                            <br>
+
+                            覆盖全国的优质资源
+
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- news -->
+    <div class="news">
+        <div class="index_news">
+            <a href="" class="new_logo"><img src="../../2005/src/img/img20190926qf.jpg"></a>
+            <div class="new_rg">
+                <div class="new_box">
+                    <h2><a href="">动态新闻</a></h2>
+                    <h3><a href="">千锋第四十三季IT互联网高端人才招聘会强势来袭</a></h3>
+                    <p>以“千锋互联寻找未来互联网精英”为主题的招聘会即<br>将来袭...</p>
+                </div>
+
+                <ul>
+                    <li><a href="">千锋“双十一”活动已上线 挖宝有福利</a></li>
+                    <li><a href="">千锋教育HTML5大前端课程重磅升级</a></li>
+                    <li><a href="">千锋教育借力“黑科技”优化课程体系</a></li>
+                    <li><a href="">千锋教育与你分享如何描绘精彩人生</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="talk">
+            <h2>与我们恰谈</h2>
+            <div class="tala_logo">
+                <span><a href=""></a></span>
+            </div>
+            <p class="num">400-811-9990 </p>
+            <p class="talk_pl">
+
+
+                企业招聘咨询：13699263893（赵老师）
+                <br>
+
+                院校深度合作：18611103635（孙老师）
+                <br>
+
+                品牌合作对接：18500436446（张老师）
+                <br>
+
+                企业合作洽谈：13810637396 （段老师）
+
+            </p>
+
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="f_box">
+        <div class="footer">
+            <div class="bot">
+                <ul class="f_big">
+                    <li>
+                        <p>走进千锋</p>
+                        <ul>
+                            <li><a href="">千锋简介</a></li>
+                            <li><a href="">千锋之路</a></li>
+                            <li><a href="">联系我们</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>双选会</p>
+                        <ul>
+                            <li><a href="">名企双选会</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>APP外包</p>
+                        <ul>
+                            <li><a href="">业务范围</a></li>
+                            <li><a href="">案列展示</a></li>
+                            <li><a href="">项目优势</a></li>
+                            <li><a href="">合作方式</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>培训服务</p>
+                        <ul>
+                            <li><a href="">企业内训</a></li>
+                            <li><a href="">师资培训</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- map -->
+            <div class="q_box bot_rg">
+                <div class="">
+                    <img src="http://1000phone.com/img/qf_code.jpg" height="146" width="146" alt="">
+                </div>
+                <span>千锋教育微信号<br>扫描加好友</span>
+            </div>
+
+            <div class="bot_rg">
+                <div class="ew">
+                    <img src="http://1000phone.com/img/new-qr.jpg">
+                </div>
+                <span>
+                    千锋教育微信号
+                    <br>
+                    扫描加好友
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- 版权 -->
+    <div class="copyright">
+        <div class="base">
+            Copyright 2011-2020 北京千锋互联科技有限公司 京ICP备12003911号-3 京公网安备11010802011455号
+        </div>
+    </div>
+</body>
+
+</html>
